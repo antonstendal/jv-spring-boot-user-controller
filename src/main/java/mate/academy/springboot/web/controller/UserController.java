@@ -21,7 +21,6 @@ public class UserController {
     }
 
     @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
     public String create(@RequestBody User user) {
         return "User created. Id: %s, email: %s".formatted(user.id(), user.email());
     }
